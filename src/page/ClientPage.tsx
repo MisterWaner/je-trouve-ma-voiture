@@ -11,23 +11,23 @@ function ClientPage() {
     const trainNumber = searchParams.get("trainNumber");
     const composition = searchParams.get("composition");
 
-    return <main>
-        <h1>Client Page</h1>
+    return (
+        <main>
+            <section>
+                <p>Station: {station}</p>
+                <p>Train Number: {trainNumber}</p>
+                <p>Composition: {composition}</p>
+            </section>
 
-        <section>
-            <p>Station: {station}</p>
-            <p>Train Number: {trainNumber}</p>
-            <p>Composition: {composition}</p>
-        </section>
+            <section>
+                {composition === "Unité Simple" && <SchemaUS />}
+                {composition === "Unité Multiple" && <SchemaUM />}
 
-        <section>
-            {composition === "Unité Simple" && <SchemaUS />}
-            {composition === "Unité Multiple" && <SchemaUM />}
-
-            {!composition && <p>Aucune composition sélectionnée</p>}
-        </section>
-
-    </main>;
+                {!composition && <p>Aucune composition sélectionnée</p>}
+            </section>
+        </main>
+    );
 }
 
 export default ClientPage;
+
