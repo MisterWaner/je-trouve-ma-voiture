@@ -1,0 +1,97 @@
+header {
+    display: grid;
+    height: 300px;
+    grid-template-columns: 3fr 6fr 3fr;
+}
+
+.header__logo {
+    width: 70%;
+    max-width: 300px;
+    justify-self: center;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    align-self: center;
+    font-size: 5rem;
+}
+
+.form-wrapper {
+    height: calc(100% - 300px);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    color: white;
+    width: 80%;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.inputs-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 70px;
+    width: 100%;
+}
+
+.input-wrapper label {
+    font-size: 2rem;
+}
+
+.input-wrapper select,
+.input-wrapper input {
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input-wrapper select option {
+    background-color: #0064ab;
+    font-weight: bold;
+    outline: 1px solid white;
+}
+
+.input-wrapper input::placeholder {
+    color: white;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper button {
+    height: 40px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 1rem;
+    width: 33.3%;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
