@@ -2,6 +2,7 @@ header {
     display: grid;
     height: 300px;
     grid-template-columns: 3fr 6fr 3fr;
+    align-content: center;
 }
 
 .header__logo {
@@ -31,30 +32,37 @@ h1 {
     border: 1px solid white;
     padding: 20px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .inputs-section {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .input-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-items: center;
     height: 70px;
     width: 100%;
 }
 
 .input-wrapper label {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+}
+
+.input-wrapper .select-wrapper {
+    width: 100%;
 }
 
 .input-wrapper select,
 .input-wrapper input {
     height: 40px;
+    width: 100%;
     background-color: transparent;
     color: white;
     padding: 5px 15px;
@@ -74,23 +82,109 @@ h1 {
 }
 
 .button-wrapper {
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .button-wrapper button {
     height: 40px;
+    grid-column: 2/3;
     background-color: transparent;
     font-weight: bold;
     font-size: 1rem;
-    width: 33.3%;
+    width: 100%;
     color: white;
     border: 1px solid white;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
     &:hover {
         background-color: white;
         color: black;
+    }
+}
+
+/* ---------------- Responsive Design ---------------- */
+@media screen and (max-width: 1440px) {
+    header {
+        grid-template-columns: 2fr 8fr 2fr;
+    }
+
+    .header__logo {
+        width: 80%;
+        max-width: 300px;
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .form-wrapper {
+        margin-top: 50px;
+    }
+
+    .inputs-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .input-wrapper {
+        gap: 20px;
+        height: auto;
+    }
+
+    .input-wrapper label {
+        font-size: 1.25rem;
+    }
+
+    .button-wrapper {
+        margin-top: 20px;
+    }
+
+    .button-wrapper button {
+        grid-column: 1/4;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__logo {
+        width: 100%;
+        max-width: 200px;
+        justify-self: center;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 1fr;
+        height: auto;
+        justify-items: start;
+    }
+
+    .input-wrapper label {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1rem;
     }
 }
