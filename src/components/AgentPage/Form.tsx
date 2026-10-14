@@ -1,9 +1,15 @@
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 import styles from "@/styles/agentPage.module.css";
+import trainData from "@/data/train-list.json";
 
 function Form() {
     const [trainNumber, setTrainNumber] = useState("");
+    const [selectedStation, setSelectedStation] = useState("Bayeux");
+
+    const uniqueTrains = Array.from(
+        new Set(trainData.trains.map((train) => train.numero)),
+    ).sort();
 
     function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -18,14 +24,20 @@ function Form() {
         const formData = new FormData(form);
 
         const station = formData.get("station") as string;
+        const trainNumber = formData.get("trainNumber") as string;
         const composition = formData.get("composition") as string;
-
+        const selectedTrainObj = trainData.trains.find(
+            (train) => train.numero === trainNumber,
+        );
         console.log({ station, trainNumber, composition });
 
         const params = new URLSearchParams({
             station,
             trainNumber,
             composition,
+            heure: selectedTrainObj
+                ? selectedTrainObj.heure_passage_theorique
+                : "",
         });
 
         const clientWindow = window.open(
@@ -52,7 +64,8 @@ function Form() {
                             id="station"
                             name="station"
                             required
-                            defaultValue=""
+                            value={selectedStation}
+                            onChange={(e) => setSelectedStation(e.target.value)}
                         >
                             <option value="" disabled>
                                 Choisissez une gare
@@ -72,7 +85,37 @@ function Form() {
                 </div>
                 <div className={styles["input-wrapper"]}>
                     <label htmlFor="trainNumber">Train n°</label>
-                    <input
+                    <div className={styles["select-wrapper"]}>
+                        <select
+                            id="trainNumber"
+                            name="trainNumber"
+                            required
+                            value={trainNumber}
+                            onChange={(event) =>
+                                setTrainNumber(event.target.value)
+                            }
+                        >
+                            <option value="" disabled>
+                                Choisissez un train
+                            </option>
+                            {uniqueTrains.map((num) => {
+                                // Optionnel : Trouver un exemple d'horaire pour ce train pour l'afficher dans le select
+                                const sampleTrain = trainData.trains.find(
+                                    (t) => t.numero === num,
+                                );
+
+                                return (
+                                    <option key={num} value={num}>
+                                        Train {num}{" "}
+                                        {sampleTrain
+                                            ? `(ex: ${sampleTrain.heure_passage_theorique})`
+                                            : ""}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    </div>
+                    {/* <input
                         type="text"
                         placeholder="33.."
                         id="trainNumber"
@@ -88,7 +131,7 @@ function Form() {
                             setTrainNumber(value);
                         }}
                         required
-                    />
+                    /> */}
                 </div>
                 <div className={styles["input-wrapper-radio"]}>
                     <label htmlFor="composition">Composition</label>
@@ -110,7 +153,9 @@ function Form() {
                                 value="Unité Multiple"
                                 id="unite-multiple"
                             />
-                            <label htmlFor="unite-multiple">Unité Multiple</label>
+                            <label htmlFor="unite-multiple">
+                                Unité Multiple
+                            </label>
                         </div>
                     </div>
                     {/* <select
@@ -136,4 +181,6 @@ function Form() {
 }
 
 export default Form;
+
+
 

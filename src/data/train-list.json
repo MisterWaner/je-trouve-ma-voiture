@@ -1,0 +1,177 @@
+{
+    "ligne": "Cherbourg - Caen - Paris Saint-Lazare",
+    "sens": "Vers Paris",
+    "arret": "Bayeux",
+    "type_service": "KRONO+",
+    "validite": "Du 31 août au 12 décembre 2026",
+    "trains": [
+        {
+            "numero": "3302",
+            "jours": "Lundi à vendredi (sauf jours fériés) - Jusqu'au 9 oct.",
+            "heure_passage_theorique": "06:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3302",
+            "jours": "Lundi à vendredi (sauf jours fériés) - À partir du 12 oct.",
+            "heure_passage_theorique": "06:40",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3304",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "07:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3304",
+            "jours": "Samedi",
+            "heure_passage_theorique": "07:48",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3306",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "09:45",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3306",
+            "jours": "Samedi",
+            "heure_passage_theorique": "09:45",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3308",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "11:44",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3308",
+            "jours": "Samedi",
+            "heure_passage_theorique": "11:43",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3308",
+            "jours": "Dimanche et Fêtes",
+            "heure_passage_theorique": "11:43",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3310",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "12:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3312",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "13:43",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3312",
+            "jours": "Samedi",
+            "heure_passage_theorique": "13:47",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3314",
+            "jours": "Samedi",
+            "heure_passage_theorique": "14:44",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3316",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "15:39",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3316",
+            "jours": "Samedi",
+            "heure_passage_theorique": "15:38",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3316",
+            "jours": "Dimanche et Fêtes",
+            "heure_passage_theorique": "15:38",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3318",
+            "jours": "Lundi à vendredi (sauf jours fériés)",
+            "heure_passage_theorique": "17:40",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3318",
+            "jours": "Samedi",
+            "heure_passage_theorique": "17:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3318",
+            "jours": "Dimanche et Fêtes",
+            "heure_passage_theorique": "17:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3320",
+            "jours": "Lundi à Jeudi (sauf jours fériés)",
+            "heure_passage_theorique": "18:41",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3320",
+            "jours": "Vendredi",
+            "heure_passage_theorique": "18:49",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3322",
+            "jours": "Samedi",
+            "heure_passage_theorique": "19:43",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3322",
+            "jours": "Dimanche et Fêtes",
+            "heure_passage_theorique": "19:43",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3324",
+            "jours": "Lundi à Jeudi (sauf jours fériés)",
+            "heure_passage_theorique": "19:40",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3324",
+            "jours": "Vendredi",
+            "heure_passage_theorique": "19:39",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3326",
+            "jours": "Dimanche et Fêtes - Le 11 nov.",
+            "heure_passage_theorique": "20:17",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3326",
+            "jours": "Dimanche et Fêtes - Le 31 oct. ou le 1er nov.",
+            "heure_passage_theorique": "20:26",
+            "destination": "Paris Saint-Lazare"
+        },
+        {
+            "numero": "3328",
+            "jours": "Dimanche et Fêtes sauf le 11 nov.",
+            "heure_passage_theorique": "21:43",
+            "destination": "Paris Saint-Lazare"
+        }
+    ]
+}

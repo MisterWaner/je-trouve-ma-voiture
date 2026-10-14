@@ -11,6 +11,7 @@ function ClientPage() {
     const gare = searchParams.get("station");
     const trainNumber = searchParams.get("trainNumber");
     const composition = searchParams.get("composition");
+    const heure = searchParams.get("heure");
 
     return (
         <main>
@@ -22,6 +23,11 @@ function ClientPage() {
                 <p className={styles["info-item"]}>
                     <span>Train n°:</span> {trainNumber}
                 </p>
+                {heure && (
+                    <p className={styles["info-item"]}>
+                        <span>Départ :</span> {heure}
+                    </p>
+                )}
             </section>
 
             <section>
@@ -43,5 +49,6 @@ function ClientPage() {
 }
 
 export default ClientPage;
+
 
 

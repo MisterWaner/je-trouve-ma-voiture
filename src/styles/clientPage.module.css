@@ -1,11 +1,10 @@
 .info-section {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px
+    grid-template-rows: repeat(3, 1fr);
 }
 .info-item {
-    text-align: center;
+    margin-left: 5%;
     color: white;
     font-size: 2rem;
     font-weight: bold;
@@ -35,7 +34,7 @@
     align-items: center;
 }
 .schema-um-container .icon-container {
-    width:100%;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -55,6 +54,12 @@
     margin: auto;
 }
 .schema-um {
-    width: 100%
+    width: 100%;
 }
 
+/* ---------------- Responsive Design ---------------- */
+@media screen and (max-width: 768px) {
+    .info-item {
+        font-size: 1.5rem;
+    }
+}
