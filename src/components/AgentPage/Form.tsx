@@ -10,7 +10,7 @@ function Form() {
 
         const form = event.currentTarget;
 
-        if(!form.checkValidity()) {
+        if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
@@ -34,7 +34,7 @@ function Form() {
             "popup=yes,width=1200,height=800",
         );
 
-        if(clientWindow) {
+        if (clientWindow) {
             clientWindow.focus();
 
             form.reset();
@@ -90,10 +90,30 @@ function Form() {
                         required
                     />
                 </div>
-                <div className={styles["input-wrapper"]}>
+                <div className={styles["input-wrapper-radio"]}>
                     <label htmlFor="composition">Composition</label>
-                    <div className={styles["select-wrapper"]}>
-                        <select
+
+                    <div className={styles["radio-group"]}>
+                        <div className={styles["radio-wrapper"]}>
+                            <input
+                                type="radio"
+                                name="composition"
+                                value="Unité Simple"
+                                id="unite-simple"
+                            />
+                            <label htmlFor="unite-simple">Unité Simple</label>
+                        </div>
+                        <div className={styles["radio-wrapper"]}>
+                            <input
+                                type="radio"
+                                name="composition"
+                                value="Unité Multiple"
+                                id="unite-multiple"
+                            />
+                            <label htmlFor="unite-multiple">Unité Multiple</label>
+                        </div>
+                    </div>
+                    {/* <select
                             id="composition"
                             name="composition"
                             required
@@ -105,14 +125,11 @@ function Form() {
 
                             <option value="Unité Simple">Unité Simple</option>
                             <option value="Unité Multiple">Unité Multiple</option>
-                        </select>
-                    </div>
+                        </select> */}
                 </div>
             </section>
             <div className={styles["button-wrapper"]}>
-                <button type="submit">
-                    Valider
-                </button>
+                <button type="submit">Valider</button>
             </div>
         </form>
     );

@@ -55,7 +55,9 @@ h1 {
     font-weight: bold;
 }
 
-.input-wrapper .select-wrapper {
+.input-wrapper,
+.input-wrapper-radio,
+.select-wrapper {
     width: 100%;
 }
 
@@ -70,6 +72,40 @@ h1 {
     border: 1px solid white;
     border-radius: 10px;
     outline: none;
+}
+
+.input-wrapper-radio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 70px;
+    width: 100%;
+}
+
+.input-wrapper-radio label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.radio-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.radio-wrapper input {
+    width: 20px;
+    height: 20px;
+}
+.radio-group .radio-wrapper label {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .input-wrapper select option {
@@ -138,7 +174,8 @@ h1 {
         height: auto;
     }
 
-    .input-wrapper label {
+    .input-wrapper label,
+    .input-wrapper-radio label {
         font-size: 1.25rem;
     }
 
@@ -167,13 +204,17 @@ h1 {
         font-size: 2rem;
     }
 
-    .input-wrapper {
+    .input-wrapper, .input-wrapper-radio {
         grid-template-columns: 1fr;
         height: auto;
         justify-items: start;
     }
-
-    .input-wrapper label {
+    .radio-group {
+        justify-content: flex-start;
+        gap: 50px;
+    }
+    .input-wrapper label,
+    .input-wrapper-radio label {
         font-size: 1rem;
     }
 }
@@ -188,3 +229,4 @@ h1 {
         font-size: 1rem;
     }
 }
+
